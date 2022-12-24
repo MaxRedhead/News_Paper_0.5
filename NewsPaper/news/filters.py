@@ -19,13 +19,6 @@ class PostFilter(FilterSet):
         empty_label='Все'
     )
 
-    #categoryType = ModelChoiceFilter(
-     #   field_name='categoryTypes',
-      #  queryset=Category.objects.all(),
-       # label='Категория',
-        #empty_label='Все'
-   # )
-
     added_after = DateTimeFilter(
         field_name='dateCreation',
         lookup_expr='gt',

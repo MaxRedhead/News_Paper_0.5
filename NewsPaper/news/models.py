@@ -5,7 +5,7 @@ from django.urls import reverse
 
 
 class Author(models.Model):
-    authorUser = models.OneToOneField(User, on_delete=models.CASCADE)
+    author_user = models.OneToOneField(User, on_delete=models.CASCADE)
     authorRating = models.IntegerField(default=0)
 
     def update_rating(self):
@@ -17,7 +17,7 @@ class Author(models.Model):
         cRat = 0
         cRat += commentRat.get("commentRating")
 
-        self.authorRating = pRat*3 + cRat
+        self.authorRating = pRat * 3 + cRat
         self.save()
 
 

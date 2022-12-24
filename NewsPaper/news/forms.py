@@ -5,8 +5,6 @@ from .models import Post
 
 
 class PostForm(forms.ModelForm):
-    #title = forms.CharField(min_length=20)
-
     class Meta:
         model = Post
         fields = [
@@ -34,11 +32,4 @@ class PostForm(forms.ModelForm):
                 "Заголовок должен начинаться с заглавной буквы"
 
             )
-
-        #cleaned_data = super().clean()
-        #description = cleaned_data.get("title")
-       # if title == title:
-            #raise ValidationError(
-             #   "Такой заголовок уже используется."
-           # )
         return title
